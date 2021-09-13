@@ -1,0 +1,95 @@
+\documentclass[onecolumn]{article}
+%\usepackage{url}
+%\usepackage{algorithmic}
+\usepackage[a4paper]{geometry}
+\usepackage{datetime}
+\usepackage[margin=2em, font=small,labelfont=it]{caption}
+\usepackage{graphicx}
+\usepackage{mathpazo} % use palatino
+\usepackage[scaled]{helvet} % helvetica
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{subfigure}
+% Letterspacing macros
+\newcommand{\spacecaps}[1]{\textls[200]{\MakeUppercase{#1}}}
+\newcommand{\spacesc}[1]{\textls[50]{\textsc{\MakeLowercase{#1}}}}
+
+\title{\spacecaps{Lab report: Lab 0 }\\ \normalsize \spacesc{TNM079, Modeling and Animation} }
+
+\author{Your Name\\yourliuid@student.liu.se}
+%\date{\today\\\currenttime}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This template outlines the different sections that are required for the reports for the lab course in TNM079 at Link\"oping University. You are encouraged to use the source for this template to produce your own lab reports. Each section title is followed by a short description and possible requirements.
+
+First out is the abstract. It should give a rough overview of the report, including purpose, key insights and major conclusions. It can additionally include a brief description of the methods used. The abstract should consist of 100 to 200 words.
+
+Remember that a good lab report does more than present results; it demonstrates the writer's comprehension of the concepts and insights behind the methods.
+\end{abstract}
+
+
+\section{Introduction}
+The introduction is there to set the stage and define the subject of the report. It should also answer the following questions: \emph{Why is the lab performed? What is the specific purpose of this lab? Why is this lab important?}
+
+\section{Assignments}
+This section should describe what work was done and how, specifically how you solved the different tasks. For this type of lab report it can be beneficial to put each assignment in its own subsection.
+
+\subsection{Assignment X.x (``Hello world'')}
+
+When working with equations, remember that it is not enough to simply state that you used this or that equation to solve the problem. You should also (briefly) describe what each equation accomplishes, what its parts are and \emph{what it means in the particular setting of this lab}. You can also mention in which file the implementations were made (this helps us). For example\dots
+
+For this assignment, the following equation regarding academic output was used.
+\begin{align}
+	\Phi_V \times \Delta_b &= \Re \label{eq:abc}
+\end{align}
+In Equation~\ref{eq:abc}, $\Phi_V$ represents the total body of work (effort) while $\Delta_b$ represents time. In the context of this report, the result $\Re$ represents the quality of the report.
+
+\subsection*{Note} % the star suppresses numbering of sections and subsections
+If you've done a good job of documenting the experimental procedure another student should be able to follow and duplicate your lab without problem.
+
+\section{Results}
+
+\begin{figure}[t]
+\centering
+    \includegraphics[width=.3\linewidth]{fig/flat.png}
+\caption{\label{fig:demo-bad}
+This is a sphere.\\(THIS IS AN EXAMPLE OF A BAD CAPTION)}
+\end{figure}
+
+The point of the results section is to provide detailed information regarding the output of the lab. This section is often dominated by tables and screenshots. Make sure that each screenshot has a purpose and the purpose is communicated to the reader. For example, avoid using single no-informational screenshots such as in Figure~\ref{fig:demo-bad}. In this case it is impossible for the reader to know why the sphere should be interesting or what it is about it that is interesting. A better way to do this is something in the lines of Figure~\ref{fig:demo}. Note how captions can be used to direct the reader towards the interesting bits of a result. Use that! Also, there is a package in latex that allows you to put screenshots next to each other, its called \emph{subfigure}.
+
+Much of the validation of the course labs is done through visual output. Screenshots are encouraged, but make sure they provide some useful insights. A two- or three-way comparison (perhaps with some particularly interesting part zoomed in) is typically a great way to present a single task. One example of a screenshot with caption is shown in figure \ref{fig:demo}. In case the assignment produces numbers, make sure you include them as this is typically a great way to compare, for example, performance. For example: \emph{In table X we show the area of different meshes using our implementation.}
+
+\begin{figure}[t]
+\centering
+\subfigure[Standard rendering]{\centering
+    \includegraphics[width=.3\linewidth]{fig/flat.png}
+        \label{fig:demo-standard}}
+\subfigure[Fancy rendering]{\centering
+    \includegraphics[width=.3\linewidth]{fig/smooth.png}
+        \label{fig:demo-fancy}}
+\caption{\label{fig:demo}
+Result from assignment X showing standard rendering (left) compared to fancy rendering (right). Notice the improved smoothness of the fancy rendering which was achieved through the use of Equation~\ref{eq:abc} and \emph{knowledge}. Using fancy shading typically becomes a trade-off between computation time and visual quality.\\(THIS IS AN EXAMPLE OF A BETTER CAPTION)}
+\end{figure}
+
+
+\section{Conclusion}
+For higher grades it is important that you not only solve the assignments but also discuss your findings. This will show your level of comprehension of the lab and is an important ingredient when assessing  the lab report.
+
+When discussing your results try to compare against known constants and expressions. For example the volume of a sphere is well known and can be compared against: \emph{We found the volume of the approximated sphere mesh (a) to be within 5 decimals correct. When applying the same procedure on a sphere mesh with smaller triangles (b) the accuracy increased to 6 decimals implying a converging calculation.}
+
+\emph{What goes in the Results section and what goes in the Conclusions section?} One rule of thumb is that if something is known or has been measured, it goes in \emph{Results} (but keep it short and to the point). If something is situational/conditional or requires reasoning or discussion, it goes in \emph{Conclusions}.
+
+
+\section{Lab partner and grade}
+For the records, give the name of your lab partner (if you didn't work alone). This section should also contain a paragraph about grading, what assignments were solved and what grade this amounts to. \emph{Since I have completed assignments x,y and z I should get grade X.}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
+

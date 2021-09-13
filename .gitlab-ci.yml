@@ -1,0 +1,14 @@
+# Use the official gcc image
+image: petiteviking/tnm079:latest
+
+stages:
+    - build
+
+MoA:
+    # Build the application
+    stage: build
+    script:
+        - mkdir build
+        - cd build
+        - cmake ..
+        - make
